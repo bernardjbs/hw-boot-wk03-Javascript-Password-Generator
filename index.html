@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Linking css files -->
-    <link rel="stylesheet" href="./Assets/css/reset.css">
+    <!-- <link rel="stylesheet" href="./Assets/css/reset.css"> -->
     <link rel="stylesheet" href="./Assets/css/style.css">
 
     <title>Password Generator</title>
 </head>
-<body>
 
+<body>
+    <section id="container">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Generate a Password</h2>
+            </section>
+            <section id="pwd-display">
+                <p id="pwd-display-text">Your secure password</p>
+            </section>
+            <section id="gen-pwd-btn">
+                <button type="button" class="btn btn-primary">Generate Password</button>
+                <input class="btn btn-secondary" type="reset" value="Reset">
+            </section>
+        </main>    
+    </section>
+    <footer></footer>
     <!-- Linking js file -->
     <script src="./Assets/js/script.js"></script>
 </body>
+
 </html>

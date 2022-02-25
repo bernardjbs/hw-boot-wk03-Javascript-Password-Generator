@@ -21,6 +21,10 @@ body {
     align-items: center;
 }
 h1 {
+    background: rgb(194, 194, 194);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px darkgray;
     font-size: 3em;
 }
 
@@ -57,4 +61,16 @@ h1 {
 
 .btn-secondary:hover {
     background-color: rgb(201, 60, 60);
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 2em;
+    }    
+    h2 {
+        font-size: 1.5em;
+    }
+    #pwd-display {
+        width: 20em;
+    }
 }

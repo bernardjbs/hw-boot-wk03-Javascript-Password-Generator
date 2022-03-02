@@ -20,12 +20,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 h1 {
     background: rgb(194, 194, 194);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px darkgray;
     font-size: 3em;
+}
+
+#pwd-status-1 {
+    transition: .7s ease-in-out;
+    color: green;
+    font-weight: bold;
 }
 
 #container {
@@ -40,26 +47,48 @@ h1 {
     /* margin: auto; */
 }
 
-#pwd-display {
-    border: 2px dashed rgb(252, 124, 124);
+#pwd-display, #pwd-border {
+    word-wrap: break-word;
     width:25em;
     min-width: 25vw;
     height: 200px;
 }
-#pwd-display-text {
-    color: gray;
-    margin-top: 20px;
+
+#pwd-display {
+    border: 2px dashed rgb(252, 124, 124);
 }
 
-#gen-pwd-btn {
+#pwd-border {
+    transition: .5s ease-in-out;
+    border: 3px dashed green;
+}
+
+#pwd-display-text, #change-pwd-text-color{
+    font-size: 1em;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#pwd-display-text {
+    color: gray;
+}
+
+#change-pwd-text-color {
+    transition: .5s ease-in-out;
+    font-weight: bold;
+    color: green;
+}
+
+#buttons {
     margin-top: 1em;
 }
 
-.btn-secondary {
+.btn-reset {
     background-color: red;
 }
 
-.btn-secondary:hover {
+.btn-reset:hover {
     background-color: rgb(201, 60, 60);
 }
 
@@ -67,11 +96,11 @@ h1 {
     h1 {
         font-size: 2em;
     }    
-    h2 {
+    #pwd-status-0 {
         font-size: 1.5em;
     }
     #pwd-display {
-        width: 20em;
+        width: 100%;
     }
 
     #container {

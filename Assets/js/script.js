@@ -1,9 +1,5 @@
 let Password = {
     charLength: Number, 
-    lw: Boolean,
-    up: Boolean, 
-    num: Boolean, 
-    sp: Boolean, 
     chosenTypes: [],
     pwdString: String
 }
@@ -19,11 +15,11 @@ function checkInput() {
     let input = getInput();
     if (input < 8 || input > 128) {
         window.alert("Wrong input: Please enter a number between 8 and 128");
-        genPwd();
+        checkInput();
     }
     else if (isNaN(input)) {
         window.alert("Wrong input: Please enter a number between 8 and 128");
-        genPwd();
+        checkInput();
     }
     else {
         console.log(input + ": the input is correct");
@@ -113,8 +109,34 @@ function genString() {
     return Password.pwdString;
 }
 
+function domStyle() {
+    let pwdContainer = document.querySelector("#pwd-container");
+    let pwdDisplay = document.querySelector("#pwd-display");
+    let pwdText = document.querySelector("#pwd-display-text");
+    let pwdStatus = document.querySelector("#pwd-status-0");
+
+    pwdContainer.addEventListener("click", function(event) {
+        var element = event.target
+        if(element.matches(".btn-gen-pwd")) {
+            console.log("the gen pwd button is pressed");
+            pwdDisplay.setAttribute("id", "pwd-border");  
+            pwdText.setAttribute("id", "change-pwd-text-color"); 
+            pwdStatus.setAttribute("id", "pwd-status-1");
+            pwdStatus.textContent = "Your Password: ";
+        }
+        else if(element.matches(".btn-reset")) {
+            pwdDisplay.setAttribute("id", "pwd-display")
+            pwdText.setAttribute("id", "pwd-display-text");
+            pwdText.textContent = "Your secure password"
+            pwdStatus.setAttribute("id", "pwd-status-0");
+            pwdStatus.textContent = "Generate a Password";
+        }
+    })
+}
+
 function genPwd() {
     let charLength = checkInput();
-    document.getElementById("pwd-display-text").innerHTML = pwdString(charLength);
-
+    document.querySelector(".pwd-string").innerHTML = pwdString(charLength);
+    //document.getElementById("pwd-display-text").innerHTML = pwdString(charLength);
+    domStyle();
 }

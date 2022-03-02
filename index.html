@@ -18,15 +18,17 @@
             <h1>Password Generator</h1>
         </header>
         <main>
-            <section>
-                <h2>Generate a Password</h2>
-            </section>
-            <section id="pwd-display">
-                <p id="pwd-display-text">Your secure password</p>
-            </section>
-            <section id="gen-pwd-btn">
-                <button type="button" class="btn btn-primary" onclick="genPwd()">Generate Password</button>
-                <input class="btn btn-secondary" type="reset" value="Reset">
+            <section id="pwd-container">
+                <section>
+                    <h2 id="pwd-status-0">Generate a Password</h2>
+                </section>
+                <section id="pwd-display">
+                    <p id="pwd-display-text" class="pwd-string">Your secure password</p>
+                </section>
+                <section id="buttons">
+                    <button type="button" class="btn btn-primary btn-gen-pwd" onclick="genPwd()">Generate Password</button>
+                    <input class="btn btn-secondary btn-reset" type="reset" value="Reset">
+                </section>    
             </section>
         </main>    
     </section>

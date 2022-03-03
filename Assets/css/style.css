@@ -44,9 +44,9 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
 }
 
+/***** IDs  *****/
 #pwd-display, #pwd-border {
     word-wrap: break-word;
     width:25em;
@@ -81,10 +81,12 @@ h1 {
 }
 
 #buttons {
-    margin-top: 1em;
+    padding: 1em;
 }
 
+/***** CLASSES *****/
 .btn-reset {
+    margin: 10px;
     background-color: red;
 }
 
@@ -92,17 +94,18 @@ h1 {
     background-color: rgb(201, 60, 60);
 }
 
+/***** MEDIA QUERIES *****/
+/* When screen is 450px or less */
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 2em;
     }    
-    #pwd-status-0 {
+    #pwd-status-0, #pwd-status-1 {
         font-size: 1.5em;
     }
-    #pwd-display {
+    #pwd-display, #pwd-border {
         width: 100%;
     }
-
     #container {
         min-width: 75vw;
         height: 75vh;
